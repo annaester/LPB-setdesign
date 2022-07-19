@@ -67,7 +67,7 @@ nav {
 
 a {
   text-decoration: none;
-  counter-reset: black;
+  color: black;
 }
 
 a:visited {
