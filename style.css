@@ -1,18 +1,21 @@
 body {
   box-sizing: border-box;
   /* overflow: hidden; */
-  font-family: "Anybody";
+  font-family: "Montserrat", sans-serif;
   margin: 0;
   background-image: url(./pics/IMG_0232_2.JPG);
   object-fit: cover;
   object-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
   background: linear-gradient(
     to right,
     rgba(53, 244, 250, 0),
-    rgba(53, 244, 250, 0.5)
+    rgba(4, 2, 55, 0.5) /* rgba(53, 244, 250, 0.5) */
   );
   color: white;
   margin: 0;
@@ -25,21 +28,22 @@ header {
   z-index: 1;
 }
 
-.aside {
+/* .aside {
   position: absolute;
   width: 50%;
   height: 100%;
   top: 0;
   right: 0;
   background-color: rgba(255, 255, 255, 0.126);
-}
+} */
 
 nav {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(127, 255, 212, 0.53);
+  background-color: rgb(133 207 170);
+  /* background-color: rgba(127, 255, 212, 0.53); */
   padding: 20px 0;
 }
 
@@ -79,8 +83,12 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 50px;
   margin-bottom: 20px;
+}
+
+#display {
+  margin-bottom: 170px;
 }
 
 h4 {
@@ -91,8 +99,7 @@ h4 {
 .ed-ex {
   background-color: rgba(207, 207, 207, 0.7);
   width: 40%;
-  padding-top: 20px;
-  padding-bottom: 30px;
+  padding: 20px 20px 30px 20px;
 }
 
 .education {
@@ -111,7 +118,7 @@ h4 {
 }
 
 .experience {
-  margin: 20px;
+  margin: 50px 20px;
   line-height: 1.2;
 }
 
@@ -119,7 +126,7 @@ h4 {
   font-size: 32px;
   border: 1px solid black;
   padding: 10px 20px;
-  margin: 5px;
+  margin: 10px 5px;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
@@ -142,7 +149,8 @@ h5 {
 }
 
 .open {
-  background-color: rgba(0, 255, 255, 0.667);
+  background-color: rgb(133 207 170 / 64%);
+  /* background-color: rgba(0, 255, 255, 0.667); */
 }
 
 .open + .list {
@@ -152,16 +160,18 @@ h5 {
 /* CAROULSEL */
 
 .carousel {
-  background-color: rgba(255, 192, 203, 0.567);
+  background-color: rgba(177, 177, 177, 0.567);
+  /* background-color: rgba(255, 192, 203, 0.567); */
   width: 40%;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px 20px 30px 20px;
 }
 
 .slidepic {
   width: auto;
-  height: 400px;
+  height: 470px;
   object-fit: cover;
 }
 
@@ -211,7 +221,20 @@ h5 {
   }
 } */
 
-footer {
+.footer1 {
+  position: fixed;
+  bottom: 0;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100vw;
+  /* background-color: rgba(255, 255, 255, 0.2); */
+  text-align: center;
+}
+
+.footer2 {
   position: fixed;
   bottom: 0;
   height: fit-content;
@@ -220,27 +243,12 @@ footer {
   justify-content: center;
   align-items: flex-end;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.2);
-  text-align: center;
-}
-
-/* .contact {
-  font-size: 21px;
-  margin: 15px 0 10px 0;
-}
-
-.contact-info {
-  font-size: 16px;
-  line-height: 1.5;
-  padding: 10px;
-} */
-
-.contact-link {
+  /* background-color: rgba(255, 255, 255, 0.2); */
   text-align: center;
 }
 
 .circles2 {
-  border: 2px solid black;
+  border: 2px solid white;
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -254,10 +262,244 @@ footer {
   font-size: 11px;
   margin: 16px 0 20px;
   text-align: center;
+  color: #fff;
 }
 
 .fab {
   font-size: 25px;
+  color: #fff;
+}
+
+/*  RESPONSIVENESS MAIN PAGE */
+
+@media (max-width: 1520px) {
+  header {
+    height: 300px;
+  }
+
+  .navbar {
+    width: 100vw;
+    font-size: 18px;
+    z-index: 1;
+    justify-content: space-evenly;
+  }
+
+  .nav-title {
+    font-size: 18px;
+  }
+
+  main {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  #display {
+    margin-bottom: 100px;
+  }
+
+  h4 {
+    font-size: 24px;
+  }
+
+  .ed-ex {
+    padding: 10px 10px 20px 10px;
+  }
+
+  .edu-text {
+    font-size: 16px;
+  }
+
+  .drop-title {
+    font-size: 18px;
+  }
+
+  .list {
+    font-size: 14px;
+    line-height: 1.3;
+  }
+
+  .carousel {
+    padding: 10px 10px 20px 10px;
+    align-items: flex-start;
+    padding-top: 50px;
+    height: 70vh;
+  }
+
+  .slidepic {
+    width: 90%;
+    height: auto;
+  }
+
+  .circles2 {
+    width: 40px;
+    height: 40px;
+    margin: 17px 20px 5px;
+    border: 1px solid white;
+  }
+
+  .linkedin {
+    font-size: 7px;
+    margin: 10px 0 20px;
+  }
+
+  .fab {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 880px) {
+  header {
+    height: 200px;
+  }
+
+  header h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+
+  header h2 {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+
+  nav {
+    padding: 10px 0;
+  }
+
+  .navbar {
+    font-size: 16px;
+  }
+
+  .nav-title {
+    font-size: 16px;
+  }
+
+  h4 {
+    font-size: 18px;
+  }
+
+  .experience {
+    margin: 30px 20px;
+  }
+
+  .ed-ex {
+    padding: 5px;
+  }
+
+  .edu-text {
+    font-size: 13px;
+  }
+
+  .drop-title {
+    font-size: 16px;
+    padding: 5px 10px;
+  }
+
+  .list {
+    font-size: 12px;
+    line-height: 1.3;
+  }
+
+  .carousel {
+    padding: 5px;
+    align-items: flex-start;
+    padding-top: 20px;
+    height: 50vh;
+  }
+
+  .slidepic {
+    height: auto;
+    width: 90%;
+  }
+}
+
+@media (max-width: 500px) {
+  header h1 {
+    font-size: 20px;
+  }
+
+  header h2 {
+    font-size: 16px;
+  }
+
+  .navbar {
+    font-size: 14px;
+  }
+
+  .nav-title {
+    font-size: 14px;
+  }
+
+  main {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  /* .aside {
+    display: none;
+  } */
+
+  .ed-ex {
+    width: 80%;
+  }
+
+  .education {
+    margin: 10px;
+  }
+
+  .edu-text {
+    margin-bottom: -10px;
+  }
+
+  .experience {
+    margin: 30px 10px 10px;
+  }
+
+  .list {
+    padding: 10px 20px;
+  }
+
+  .carousel {
+    width: 80%;
+    height: 230px;
+    padding: 5px;
+    align-items: flex-start;
+    padding-top: 30px;
+  }
+
+  .slidepic {
+    height: 200px;
+    width: auto;
+  }
+
+  .footer1 {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+  }
+
+  .circles2 {
+    width: 30px;
+    height: 30px;
+    margin: 10px 10px 5px;
+    border: 1px solid white;
+  }
+
+  .linkedin {
+    font-size: 7px;
+    margin: 5px 0 20px;
+  }
+
+  .fab {
+    font-size: 14px;
+  }
 }
 
 /* GALLERY */
@@ -299,7 +541,101 @@ footer {
   font-style: italic;
 }
 
-.imagebox {
+.gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.row {
+  display: flex;
+  width: 80%;
+  /* flex-wrap: wrap; */
+  padding: 0 4px;
+}
+
+.column {
+  flex: 50%;
+  padding: 0 7px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.column img:hover {
+  transform: scale(1.2);
+  transition: 0.2s ease-in;
+}
+
+.picname2 {
+  color: #fff;
+  text-align: center;
+  margin: 4px 0 0 0;
+}
+
+/* RESPONSIVNESS GALLERY */
+
+@media (max-width: 768px) {
+  .back-btn {
+    margin: 10px;
+    padding: 10px;
+    width: 70px;
+    font-size: 10px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .undertext {
+    margin: 0 auto;
+    top: 80px;
+    width: 60vw;
+    font-size: 13px;
+  }
+
+  .row {
+    width: 100%;
+  }
+
+  .column {
+    flex: 50%;
+    padding: 0 3px;
+  }
+
+  .column img {
+    width: 100%;
+  }
+
+  .picname2 {
+    font-size: 9px;
+  }
+
+  .circles2 {
+    width: 30px;
+    height: 30px;
+    margin: 10px 10px 5px;
+    border: 1px solid white;
+  }
+
+  .linkedin {
+    font-size: 7px;
+    margin: 5px 0 20px;
+  }
+
+  .fab {
+    font-size: 14px;
+  }
+}
+
+/*GALLERY VARIATION*/
+
+/* .imagebox {
   display: flex;
   justify-content: center;
   margin-top: 100px;
@@ -330,6 +666,7 @@ footer {
   padding: 200px;
   left: 0;
   right: 0;
+  bottom: 10px;
   padding: 170px 0;
   font-size: 24px;
   opacity: 0;
@@ -337,11 +674,18 @@ footer {
 }
 
 .picname:hover {
+  color: #fff;
   opacity: 1;
 }
 
 .image-container {
   position: relative;
+}
+
+.image-container:hover {
+  transform: scale(1.2);
+  transition: 0.2s ease-in;
+  z-index: 1;
 }
 
 .overlay {
@@ -354,4 +698,4 @@ footer {
 
 .overlay:hover {
   background-color: rgba(156, 166, 197, 0.5);
-}
+} */
