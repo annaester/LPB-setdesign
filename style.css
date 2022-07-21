@@ -87,9 +87,9 @@ main {
   margin-bottom: 20px;
 }
 
-#display {
+/* #display {
   margin-bottom: 170px;
-}
+} */
 
 h4 {
   font-size: 38px;
@@ -220,6 +220,48 @@ h5 {
     left: 0;
   }
 } */
+
+.contacttitle {
+  color: #fff;
+  font-size: 24px;
+}
+
+.contact-form {
+  margin-bottom: 50px;
+  justify-self: center;
+  align-self: center;
+}
+
+#contactform {
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+textarea {
+  padding: 10px;
+  margin: 10px 0;
+  width: 100%;
+  background-color: rgba(177, 177, 177, 0.567);
+  border-radius: 12px;
+  border: 1px solid #fff;
+  color: black;
+}
+
+::placeholder {
+  color: black;
+}
+
+.submitbtn {
+  width: 70%;
+  border-radius: 12px;
+  align-self: center;
+  background-color: transparent;
+  border: 2px solid #fff;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+}
 
 .footer1 {
   position: fixed;

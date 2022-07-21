@@ -205,6 +205,36 @@
       </div>
     </main>
 
+    <section class="contact-form">
+      <h5 class="contacttitle">Contact me:</h5>
+      <form
+        id="contactform"
+        action="https://formsubmit.io/send/lisa.blome@hotmail.com"
+        method="POST"
+      >
+        <input name="name" type="text" id="name" placeholder="Name" required />
+        <input
+          name="email"
+          type="email"
+          id="email"
+          placeholder="Your email"
+          required
+        />
+        <textarea
+          name="comment"
+          id="comment"
+          rows="3"
+          placeholder="Your message"
+          minlength="3"
+          maxlength="140"
+        ></textarea>
+
+        <input name="_formsubmit_id" type="text" style="display: none" />
+
+        <input class="submitbtn" value="Submit" type="submit" />
+      </form>
+    </section>
+
     <footer class="footer1">
       <!-- <h2 class="contact">Contact</h2> -->
       <a
