@@ -211,7 +211,14 @@
         id="contactform"
         action="https://formsubmit.io/send/lisa.blome@hotmail.com"
         method="POST"
+        onsubmit="this.submit(); this.reset(); return false;"
       >
+        <input
+          name="_redirect"
+          type="hidden"
+          id="name"
+          value="https://lpb-setdesign.netlify.app/"
+        />
         <input name="name" type="text" id="name" placeholder="Name" required />
         <input
           name="email"

@@ -87,9 +87,9 @@ main {
   margin-bottom: 20px;
 }
 
-/* #display {
-  margin-bottom: 170px;
-} */
+#display {
+  margin-bottom: 50px;
+}
 
 h4 {
   font-size: 38px;
@@ -246,6 +246,7 @@ textarea {
   border-radius: 12px;
   border: 1px solid #fff;
   color: black;
+  font-family: "Montserrat", sans-serif;
 }
 
 ::placeholder {
@@ -261,6 +262,12 @@ textarea {
   font-size: 16px;
   font-family: "Montserrat", sans-serif;
   color: #fff;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.submitbtn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .footer1 {
@@ -340,7 +347,7 @@ textarea {
   }
 
   #display {
-    margin-bottom: 100px;
+    margin-bottom: 50px;
   }
 
   h4 {
@@ -368,7 +375,7 @@ textarea {
     padding: 10px 10px 20px 10px;
     align-items: flex-start;
     padding-top: 50px;
-    height: 70vh;
+    height: 50vh;
   }
 
   .slidepic {
@@ -450,12 +457,29 @@ textarea {
     padding: 5px;
     align-items: flex-start;
     padding-top: 20px;
-    height: 50vh;
+    height: 30vh;
   }
 
   .slidepic {
     height: auto;
     width: 90%;
+  }
+
+  input,
+  textarea {
+    padding: 8px;
+    margin: 8px 0;
+    border-radius: 8px;
+    font-size: 12px;
+  }
+
+  .submitbtn {
+    border-radius: 8px;
+    font-size: 12px;
+  }
+
+  .contacttitle {
+    font-size: 18px;
   }
 }
 
@@ -482,6 +506,10 @@ textarea {
     flex-direction: column-reverse;
     align-items: center;
     margin-top: 10px;
+  }
+
+  #display {
+    margin-bottom: 30px;
   }
 
   /* .aside {
